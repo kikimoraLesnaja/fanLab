@@ -1,0 +1,17 @@
+<!doctype html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>320 Base</title>
+<link rel="stylesheet" href="view/320/css/style320.css" type="text/css">
+<style type="text/css">
+
+</style>
+  
+  </head>
+<body >
+<div id="main">
+<div id="cap">
+<div id="langs"><a href="#">EE</a> &nbsp;&nbsp;<a href="#">RU</a> &nbsp;&nbsp;<a href="#">EN</a> &nbsp;&nbsp;</div>
+cap
+</div>
