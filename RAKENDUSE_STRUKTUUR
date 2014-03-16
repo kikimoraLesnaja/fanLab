@@ -1,0 +1,20 @@
+RAKENDUSE  kataloogid ja struktuur
+
+Kasutame MVC-mudelit (MODEL-VIEW-CONTROLLER) ja PHP OOP stiilis.
+
+Saidil on olemas katalooge:
+js – sisaldab javascript-koodit
+classes - sisaldab  php-klassis, mida kasutatakse rakenduses
+controller– siin asuvad failid, mida vormeerivad muutujad, mida kasutatakse shabloonides.
+model– sisaldab fail fun.php, kus asuvad funktsioone, mida töötlevad andmeid ja ka fail words.txt, kus kirjutanud sõnaraamat.
+view - sisaldab shabloone php-formaadis
+
+
+Ka peakataloogis asuvad 2 failit: index.php ja config.php
+
+config.php failis ka märatakse kust me võtame andmeid: - MySQL baasilt, MSSQL-baasilt või failidest (näiteks sõnaraamat)
+
+
+
+
+
