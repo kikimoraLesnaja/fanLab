@@ -1,5 +1,33 @@
-<div id="field"> <br><br><br> Game field</div>
+<div class="field" id="field"></div>
 
 </div>
+<script>
+/*var square = document.createElement('div');
+	square.id = "1";
+	square.className = 'gameFieldSquare';
+	var image = document.createElement("img");
+	image.src = '../img/sand.png';
+	square.appendChild(image);
+	document.getElementById('field').appendChild(square);
+*/
+for (var i=0; i<15; i++)
+{
+	var row = document.createElement('div');
+	row.id = i;
+	row.className = 'gameFieldRow';
+	for (var j=0; j<15; j++)
+	{
+		var square = document.createElement('div');
+		square.id = i + ", j";
+		square.className = 'gameFieldSquare';
+		var image = document.createElement("img");
+		image.src = '../img/sand.png';
+		square.appendChild(image);
+		row.appendChild(square);
+	}
+	document.getElementById('field').appendChild(row);
+}
+
+</script>
 </body>
 </html>

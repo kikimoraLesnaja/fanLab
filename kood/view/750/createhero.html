@@ -1,47 +1,93 @@
 <div id="field"> 
- <form action="#" method="post">
+ <form name = "createhero" action="#" method="post">
 	<div id="createHero">
-       <DIV style="width:720px; text-align:left; padding-left:20px:height:50px"><p>Hero Name &nbsp;&nbsp;&nbsp;
-         <input type="text" name="heroname" id="heroname" style="width:350px; "> &nbsp;&nbsp;&nbsp; &nbsp;
-         Sex <input type="radio" name="heroSex" checked value=1> boy &nbsp;&nbsp; 
-         <input type="radio" name="heroSex"  value=0> girl
-       </p>
-       </DIV>
-         	<div class="createHeroCont" >
-              
-               
-              <p>Hero's type </p>
-              <div class="ht"><input type="radio" name="heroType" > Peasant</div>
-               <div class="ht"><input type="radio" name="heroType" > Warrior</div>
-                 <div class="ht"><input type="radio" name="heroType" > Magician</div>
-                  <div class="ht"><input type="radio" name="heroType" checked> Hedgehog in fog</div>
-               
-            
-              
-              <p>&nbsp;</p>
-       		</div>
-            
-             <div class="createHeroCont" style="border-right:solid 1px #762E0E; border-left:solid 1px #762E0E;"> 
-            
-              <p>Hero's avatar </p>
-              <p><img src="../img/heroes/ez.png" class="heroImg"  alt="avatar" style="border:solid 2px #FB0652" ></p>
-              <p>&nbsp;</p>
-              <p><img src="../img/heroes/ez2.png" class="heroImg"  alt="avatar"></p>
-              <p>&nbsp;</p>
-              <p>
-                <input type="submit" value="   OK   ">
-              </p>
-              
-             </div>
-             
-             <div class="createHeroCont"> 
-             
-               <p>Arms </p>
-               <p><img src="../img/arms/sword.png" class="heroImg"  alt="avatar"></p>
-               <p>&nbsp;</p>
-               <p><img src="../img/arms/axe.png" class="heroImg"  alt="avatar"  style="border:solid 2px #FB0652"></p>
-             </div>
-	  </div>
+        <DIV style="width:720px; text-align:left; padding-left:5px;height:50px"><p>Welcome to Fantasy Quest, create your character here:</p>
+	<!--<p>Hero Name &nbsp;&nbsp;&nbsp;
+         <input type="text" name="heroName" id="heroname" style="width:350px; "> &nbsp;&nbsp;&nbsp; &nbsp;
+         Sex <input type="radio" name="heroSex" checked value="Male"> Male &nbsp;&nbsp; 
+         <input type="radio" name="heroSex"  value="Female"> Female
+        </p>-->
+	<div style="width:715px; text-align:center; padding-top:10px; height:600px; background-color:#F5E44A;">
+	<div id="gender">
+		<p>Name your hero:<p>
+		<input type="text" name="heroName" id="heroname" style="width:200px;">
+		<p>Choose your hero's gender:<p>
+		<input type="radio" name="heroSex" value="Male" checked> Male &nbsp;&nbsp; 
+         	<input type="radio" name="heroSex" value="Female"> Female
+		<p><input type=button 
+		value="Continue"
+		onClick=buttonClicked()>
+	</div>
+	<div id="type"; style="display: none">
+		<p>Choose a class:</p>
+              	<p><input type="radio" name="heroType" value="Peasant" checked> Peasant
+              	<p><input type="radio" name="heroType" value="Warrior"> Warrior
+              	<p><input type="radio" name="heroType" value="Magician"> Magician
+		<br><p>Choose an avatar:</p>
+		<p><input type="radio" name="heroAvatar" value = "1" checked><img id ="avatar1" class="heroImg"  alt="avatar" ></p>
+		<p><input type="radio" name="heroAvatar" value = "2"><img id ="avatar2" class="heroImg"  alt="avatar"></p>
+		<p><input type=button 
+		value="Continue"
+		onClick=button2Clicked()>
+       	</div>
+	<div id="weapon"; style="display: none">
+		<p id = "weapontext"></p>
+              	<p><input type="radio" name="weapon" value = "sword" checked><img src="../img/arms/Warrior/sword.png" class="heroImg"  alt="avatar"></p>
+		<p><input type="radio" name="weapon" value = "axe"><img src="../img/arms/Warrior/axe.png" class="heroImg"  alt="avatar" ></p>
+		<p><input type=button 
+		value="Continue"
+		onClick=button3Clicked()>
+       	</div>
+	<div id="done"; style="display: none">
+		<p id = "congrats"></p>
+		<p><a href="index.php">Start playing!</a>
+	</div>
+	</div>
+	</div>
+        </DIV>
+
+	<script>
+		var heroSex = document.querySelector('input[name = "heroSex"]:checked').value;
+		var heroType = document.querySelector('input[name = "heroType"]:checked').value;
+		var heroAvatar = document.querySelector('input[name = "heroAvatar"]:checked').value;
+		var heroName = "Captain Placeholder";
+		function makeInvisible(id) {
+       			var e = document.getElementById(id);
+          		e.style.display = 'none';
+    		}
+		function makeVisible(id) {
+       			var e = document.getElementById(id);
+          		e.style.display = 'block';
+    		}
+		function buttonClicked()
+		{
+			heroName = document.getElementById('heroname').value;
+			if (heroName == "") {
+				alert("Please enter name!");
+				return;
+			}
+			heroSex = document.querySelector('input[name = "heroSex"]:checked').value;
+			document.getElementById("avatar1").src = "../img/heroes/"+ heroSex + "/1.png";
+			document.getElementById("avatar2").src = "../img/heroes/"+ heroSex + "/2.png";
+			makeInvisible("gender");
+			makeVisible("type");
+		}
+		function button2Clicked()
+		{
+			heroType = document.querySelector('input[name = "heroType"]:checked').value;
+			heroAvatar = document.querySelector('input[name = "heroAvatar"]:checked').value;
+			document.getElementById("weapontext").innerHTML = "Pick a weapon for your "+heroType+ ":";
+			makeInvisible("type");
+			makeVisible("weapon");
+		}
+		function button3Clicked()
+		{
+			makeInvisible("weapon");
+			var imgsrc = "../img/heroes/"+ heroSex +"/" + heroAvatar +".png";
+			document.getElementById("congrats").innerHTML = "<img src = " + imgsrc + "><br>Congratulations! You created " + heroName + " the " + heroSex + " " + heroType + "!";
+			makeVisible("done");
+		}
+	</script>
      </form>
 </div>
 </div>
