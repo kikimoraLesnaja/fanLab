@@ -1,0 +1,160 @@
+--
+-- Database: 'fanlab' !!!! THIS CODE USES IN MySQL DataBase, may be in  MSSQL SQL syntaxis be must change !!!
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_arms'
+--
+
+CREATE TABLE fan_arms (
+  ida integer NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  ee varchar(255) NOT NULL,
+  en varchar(255) NOT NULL,
+  ru varchar(255) NOT NULL,
+  descee text,
+  descen text,
+  descru text,
+  powerlevel integer NOT NULL,
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_artefacts'
+--
+
+CREATE TABLE fan_artefacts (
+  idar integer NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  ee varchar(255) NOT NULL,
+  en varchar(255) NOT NULL,
+  ru varchar(255) NOT NULL,
+  descee text NOT NULL,
+  descen text NOT NULL,
+  descru text NOT NULL,
+  amount integer DEFAULT NULL
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_enemies'
+--
+
+CREATE TABLE fan_enemies (
+  ide integer NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  ee varchar(255) NOT NULL,
+  en varchar(255) NOT NULL,
+  ru varchar(255) NOT NULL,
+  descee text,
+  descen text,
+  descru text,
+  powerlevel integer NOT NULL,
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_heroes'
+--
+
+CREATE TABLE fan_heroes (
+  idh integer NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  ee varchar(255) NOT NULL,
+  en varchar(255) NOT NULL,
+  ru varchar(255) NOT NULL,
+  descee text,
+  descen text,
+  descru text,
+  life integer NOT NULL,
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_persons'
+--
+
+CREATE TABLE fan_persons (
+  idp integer NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  id integer NOT NULL,
+  name varchar(255) NOT NULL,
+  idh integer NOT NULL,
+  start_time timestamp NOT NULL,
+  health integer NOT NULL,
+  end_time datetime NOT NULL,
+  field text NOT NULL
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_person_arm'
+--
+
+CREATE TABLE fan_person_arm (
+  idp integer NOT NULL,
+  ida integer NOT NULL,
+  power integer NOT NULL,
+  PRIMARY KEY (idp,ida)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_person_artefact'
+--
+
+CREATE TABLE fan_person_artefact (
+  idp integer NOT NULL,
+  idar integer NOT NULL,
+  amount integer DEFAULT NULL,
+  PRIMARY KEY (idp,idar)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_users'
+--
+
+CREATE TABLE fan_users (
+  id integer NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  name varchar(255) NOT NULL,
+  lastname varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
+  pass varchar(255) NOT NULL,
+  date_reg timestamp NOT NULL
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table 'fan_words'
+--
+
+CREATE TABLE fan_words (
+  kw varchar(255) NOT NULL PRIMARY KEY,
+  ee varchar(255) NOT NULL,
+  en varchar(255) NOT NULL,
+  ru varchar(255) NOT NULL
+);
+
+--
+-- Dumping data for table 'fan_words'
+--
+
+INSERT INTO 'fan_words' ('kw', 'ee', 'en', 'ru') VALUES
+('about', 'Mängust', 'About', 'О игре'),
+('allhero', 'Kõik kangelased', 'All heroes', 'Все герои'),
+('creahero', 'Uus kangelane', 'Create hero', 'Создать героя'),
+('email', 'E-post', 'E-mail', 'Эл. почта'),
+('heroes', 'Kangelased', 'Heroes', 'Герои'),
+('nick', 'Kasutajanimi', 'Nickname', 'Пользователь'),
+('nickname', 'Kasutajanimi', 'Nickname', 'Имя пользов.'),
+('pass', 'Parool', 'Password', 'Пароль'),
+('reg', 'Registreeru', 'Register', 'Регистрация'),
+('repeat_pass', 'Parool uuesti', 'Repeat Password', 'Пароль ещё раз'),
+('user', 'Kasutaja', 'User', 'Имя пользов.');
+

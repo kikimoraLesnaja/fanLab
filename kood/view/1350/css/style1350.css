@@ -12,7 +12,7 @@ font-size:26px;
 font-size:26px;
 text-align:center;}
 
-#menu{width:1350px;height:40px;background-color:#FF0;
+#menu{width:1350px;height:45px;background-color:#FF0;
 }
 
 #langs{
@@ -22,7 +22,7 @@ text-align:center;}
 }
 #menuLeft{width:650px; height:30px;
 font-size:20px;
-padding-top:10px;
+padding-top:5px;
 padding-left:25px;
 float:left;
 
@@ -31,13 +31,14 @@ float:left;
 
 #menuRight{width:650px; height:30px;
 font-size:20px;
-padding-top:10px;
+padding-top:5px;
 padding-right:25px;
 float:right;
 text-align:right;
 
 }
 .klient{width:70px;
+height:20px;
 }
 
 #hero{width:750px;height:75px;background:#FF00CC;
@@ -64,13 +65,13 @@ float:left;
 
 #heroAllTop{
 width:300px;
-height:50px;
+height:700px;
 padding-top:7px;
 }
 
-#heroAllMain{
+#heroAllTBot{
 width:300px;
-height:700px;
+height:50px;
 padding-top:7px;
 }
 
@@ -109,6 +110,7 @@ float:left;text-align:center;}
 	height:600px;
 	margin:auto;
 	margin-top:50px;
+	padding-top:10px;
 	/*margin-left:50px;
 	margin-right:50px;
 	*/
