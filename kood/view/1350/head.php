@@ -5,6 +5,8 @@
 <title>1350 Base</title>
 <link rel="stylesheet" href="view/1350/css/style1350.css" type="text/css">
 <script type="text/javascript" src="js/start.js"></script>
+<script type="text/javascript" src="js/createhero.js"></script>
+<script type="text/javascript" src="js/fblogin.js"></script>
 <style type="text/css">
 
 

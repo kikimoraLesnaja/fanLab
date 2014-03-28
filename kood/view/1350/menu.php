@@ -6,6 +6,8 @@
 	</div>
 	<div id="menuRight"><?  echo $user ?> <input type="text" class="klient">&nbsp;&nbsp;&nbsp;<?  echo $pass ?> 
     <input type="password" class="klient">&nbsp;&nbsp;&nbsp;<input type="button" value="Go">
+    <div class="fb-login-button" data-max-rows="1" data-size="small" data-show-faces="false" data-auto-logout-link="true"></div>
 	</div>
+    
      <div class="bu"></div>
 </div>
