@@ -21,18 +21,18 @@ text-align:center;}
 font-size:18px;
 }
 
-#menuLeft{width:200px; height:30px;
-font-size:18px;
+#menuLeft{width:225px; height:30px;
+font-size:16px;
 padding-top:10px;
-padding-left:15px;
+padding-left:10px;
 float:left;
-/*background-color:#ccc;*/
+/*background-color:#cc0;*/
 }
 
-#menuRight{width:500px; height:30px;
-font-size:18px;
+#menuRight{width:495px; height:30px;
+font-size:16px;
 
-padding-right:15px;
+padding-right:10px;
 float:right;
 padding-top:10px;
 text-align:right;
@@ -198,5 +198,5 @@ display:none;
 }
 .errorS{
  color:#F00;
- font-weight:bold;
+ /*font-weight:bold;*/
 }

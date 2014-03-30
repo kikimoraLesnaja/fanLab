@@ -45,7 +45,7 @@ if(!preg_match('|^([a-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})|is', 
 		if(strtoupper($res2[0][0]) != strtoupper($email)){
 			$sel3="SELECT email FROM ".DB_PREFIX."users WHERE email='$email'";
 			$db->query($sel3);
-			if($db->num_rows()>0) $error+=128;
+			if($db->num_rows()>0) $error+=256;
 			}
 	}
 

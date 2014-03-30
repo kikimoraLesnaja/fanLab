@@ -1,10 +1,11 @@
  <div id="register">
+ <div class="errorS"><?  echo $errorString ?></div>
         <form action="" method="post">
         
           <p><?  echo $nick ?></p>
-           <p><input type="text" name="nickname" id="nickname" value=""></p>
+           <p><input type="text" name="nickname" id="nickname" value="<? echo $nickname ?>"></p>
           <p><?  echo $email ?></p>
-          <p><input type="text" name="email" id="email"></p>
+          <p><input type="text" name="email" id="email" value="<? echo $e_mail ?>"></p>
           <p><?  echo $pass ?></p>
           <p><input type="password" name="pass1" id="pass1"></p>
           <p><?  echo $repeat_pass ?></p>

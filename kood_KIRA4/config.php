@@ -17,8 +17,8 @@ if(isset($_GET['screenWidth'])){
 		else
 			$screenWidth=750;
 		}
-		
-		////////////////////$screenWidth=320;
+		////////////////////
+		$screenWidth=750;
 		
 $_SESSION['saveWidth']=$screenWidth;
 
@@ -98,12 +98,12 @@ if(isset($_POST['clientName'])) $clientName=convertToBase($_POST['clientName']);
 //  DATA BASE PARAMETERS
 
 $dataSource='MYSQL';
-/*
+
 $dbHost='localhost';
 $dbUser='root';
 $dbPass='';
 $dbName='fanlab';
-*/
+/*
 $dbHost='ats.cs.ut.ee';
 
 $dbUser='kira77';
@@ -111,7 +111,7 @@ $dbUser='kira77';
 $dbPass='f4nl4bKIRA351';
 
 $dbName='kira77_fanlab';
-
+*/
 
 switch($dataSource){
 // Data base object creation

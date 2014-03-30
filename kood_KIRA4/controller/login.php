@@ -3,7 +3,7 @@
 $error=1;
 
 inputControl($clientName, $clientPass);
-echo  "error - $error";
+//echo  "error - $error";
 if($error==1){
 
 $errorLogin='';

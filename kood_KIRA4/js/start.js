@@ -18,8 +18,8 @@ var ar=ti.split(" ");
 //alert("title="+ti+", eval= " + ar[0]  );
 //+ eval(ti)
 //alert("width 2="+width+", ar0= " + ar[0]  );
-/////////////
-if(width != ar[0]) window.location='index.php?screenWidth='+width;
+
+/////////////if(width != ar[0]) window.location='index.php?screenWidth='+width;
 
 
 function chboxik(t){
