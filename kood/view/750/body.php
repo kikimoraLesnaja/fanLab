@@ -7,6 +7,8 @@
 	<div id="heroAllTop">
 		<div class="heroAllDet"><a href="?page=allhero&lang=<? echo $lang ?>"><?  echo $allhero ?></a></div>
 		<div class="heroAllDet"><a href="?page=creahero&lang=<? echo $lang ?>"><?  echo $creahero ?></a></div>
+        <div class="bu">
+        </div>
 	
 	</div>
 

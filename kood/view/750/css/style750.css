@@ -28,7 +28,7 @@ padding-left:25px;
 float:left;
 }
 
-#menuRight{width:400px; height:30px;
+#menuRight{width:425px; height:30px;
 font-size:18px;
 
 padding-right:15px;
@@ -111,13 +111,7 @@ background-color:#66FF99;
 font-size:26px;text-align:center;}
 .bu{clear:both}
 
-.gameFieldSquare{width:50px;
-height:50px;
-background-color:#F7C750;
-float: left;}
 
-.gameFieldRow{width:750px;
-height:50px;}
 
 #register{
 	width:300px;
@@ -141,6 +135,7 @@ height:50px;}
 	margin-top:15px;
 	/*margin-left:50px;
 	margin-right:50px;
+	
 	*/
 	font-size:20px;
 	background-color:#3CBB57;
@@ -162,4 +157,44 @@ height:50px;}
 	text-align:left;
 	padding-left:20px;
 	height:50px;
+}
+/* ----------------- PROFIL ------------------*/
+
+#profil{
+	width:650px;
+	height:600px;
+	margin:auto;
+	margin-top:20px;
+	padding-top:10px;
+	/*margin-left:50px;
+	margin-right:50px;
+	*/
+	font-size:20px;
+	background-color:#3CBB57;
+	}
+	
+.profilBox{
+	width:300px;
+	height:350px;
+	margin:auto;
+	margin-bottom:20px;
+	padding:10px;
+	/*
+	
+	margin-left:50px;
+	margin-right:50px;
+	border:solid 1px #0C0;
+	*/
+	font-size:20px;
+	background-color:#3CBB57;
+	
+	float:left;
+	}
+
+#passBox{
+display:none;
+}
+.errorS{
+ color:#F00;
+ /*font-weight:bold;*/
 }

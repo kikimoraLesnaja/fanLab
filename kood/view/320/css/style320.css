@@ -24,13 +24,14 @@ text-align:center;
 }
 
 
-#klient{width:60px;
+#klient{width:70px;
+height:25px;
 }
 
 #hero{width:320px;height:75px;background:#FF00CC;
 font-size:26px;}
 
-#heroProp{width:235px;
+#heroProp{width:220px;
 background-color:#CC6633;
 height:65px;
 float:left;
@@ -38,26 +39,29 @@ font-size:18px;
 padding:5px;}
 
 
-#field{width:320px;height:320px;
+#field{width:320px;height:380px;
 background-color:#66FF99;
 font-size:18px;
-text-align:center;}
+text-align:center;
+padding-top:0px;}
 
 .bu{clear:both}
 
 #register{
 	width:300px;
-	height:300px;
+	height:400px;
 	margin:0 10px;
-
+margin-top:5px;
+font-size:18px;
 	/*
 		margin:auto;
-	margin-top:5px;
+	
 	margin-left:50px;
 	margin-right:50px;
-	*/
-	font-size:16px;
-	background-color:#6f9;
+
+	6f9*/
+	background-color:#CCC; 
+	
 	}
 	#register input{
 		height:15px;
@@ -67,16 +71,24 @@ text-align:center;}
 		padding-top:0;
 		
 	}
+.regLabel{
+ width:150px;
+  text-align:center; 
+ margin: 10px auto;
+ height:45px;
+ /*
+  float:left;
+ display:inline;
+ background-color:#FF0;*/
+}
 
 #heroesLinks{
 	width:200px;
 	height:200px;
-	margin: 50px auto auto auto;
-
-	
+	margin: 50px auto auto auto;	
 	}
 	
-	.heroAllDet{
+.heroAllDet{
 width:200px;
 height:30px;
 padding-top:20px;
@@ -136,7 +148,7 @@ text-align:center;
 }
 
 #heroAllTop{
-width:75px;
+width:90px;
 height:50px;
 float:left;
 padding-top:25px;
@@ -180,3 +192,52 @@ padding-top:15px;
 float:left;
 background-color:#F7C750;
 	}
+	
+	/* ----------------- PROFIL ------------------*/
+
+#profil{
+	width:320px;
+	height:750px;
+	margin:auto;
+	margin-top:0px;
+	padding-top:5px;
+	/*margin-left:50px;
+	margin-right:50px;
+	*/
+	font-size:20px;
+	background-color:#3CBB57;
+	}
+	
+.profilBox{
+	width:300px;
+	height:350px;
+	margin:auto;
+	margin-bottom:20px;
+	padding:10px;
+	/*
+	
+	margin-left:50px;
+	margin-right:50px;
+	border:solid 1px #0C0;
+	*/
+	font-size:20px;
+	background-color:#3CBB57;
+	
+	float:left;
+	}
+
+#passBox{
+display:none;
+}
+
+.errorS{
+ color:#F00;
+ height:50px;/* background-color:#ff0 */
+ /*font-weight:bold;*/
+}
+
+.errorLOG{
+ color:#F00;
+ height:50px;background-color:#ff0 /* */
+ /*font-weight:bold;*/
+}

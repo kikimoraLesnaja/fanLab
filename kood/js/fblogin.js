@@ -26,8 +26,12 @@
   }(document));
 
   function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Good to see you, ' + response.name + '.');
+      	$.ajax({
+    	type: 'POST',
+   	 url: 'controller/fblogin.php',
+    	data: {nick: response.name, id: response.id}});
     });
+	
   }
+

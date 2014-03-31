@@ -20,7 +20,7 @@ text-align:center;}
 	text-align:right;
 	
 }
-#menuLeft{width:600px; height:30px;
+#menuLeft{width:550px; height:30px;
 font-size:20px;
 padding-top:5px;
 padding-left:25px;
@@ -29,14 +29,15 @@ float:left;
 
 }
 
-#menuRight{width:650px; height:30px;
+#menuRight{width:750px; height:30px;
 font-size:20px;
 padding-top:5px;
 padding-right:25px;
 float:right;
 text-align:right;
-
+/*background:#eee;*/
 }
+
 .klient{width:70px;
 height:20px;
 }
@@ -148,4 +149,45 @@ float:left;text-align:center;}
 	text-align:left;
 	padding-left:20px;
 	height:50px;
+}
+/* ----------------- PROFIL ------------------*/
+
+#profil{
+	width:650px;
+	height:600px;
+	margin:auto;
+	margin-top:20px;
+	padding-top:10px;
+	/*margin-left:50px;
+	margin-right:50px;
+	*/
+	font-size:20px;
+	background-color:#3CBB57;
+	}
+	
+.profilBox{
+	width:300px;
+	height:350px;
+	margin:auto;
+	margin-bottom:20px;
+	padding:10px;
+	/*
+	
+	margin-left:50px;
+	margin-right:50px;
+	border:solid 1px #0C0;
+	*/
+	font-size:20px;
+	background-color:#3CBB57;
+	
+	float:left;
+	}
+
+#passBox{
+display:none;
+}
+
+.errorS{
+ color:#F00;
+ font-weight:bold;
 }

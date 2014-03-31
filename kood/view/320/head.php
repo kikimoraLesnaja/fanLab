@@ -7,7 +7,7 @@
 <style type="text/css">
 
 </style>
-  
+  <script type="text/javascript" src="js/start.js"></script>
   </head>
 <body >
 <div id="main">

@@ -1,0 +1,3 @@
+<?
+$loginok=tr('loginok');
+?>

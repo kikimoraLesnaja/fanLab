@@ -45,7 +45,7 @@ class Db
         //this function must return 2-x array, where rows has index , but columns has associative kay that is 
         // columns names in SQL query
 	$assoc_array=array();
-
+		//echo "nun =".$this->num_rows();
         if($this->num_rows()>0)
 	        while ($row = mysql_fetch_assoc($this->res))
         	    $assoc_array[] = $row;
