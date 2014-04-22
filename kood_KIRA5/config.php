@@ -41,22 +41,13 @@ define(HEROES_MAX,	10);
 //****************  LIBRARY & CLASSES *******************//
 
 include (MY_ROOT.'model/fun.php');
-
 include (MY_ROOT.'classes/Db.php'); 
-
 //include (MY_ROOT.'classes/DbMS.php');
-
 include (MY_ROOT.'classes/MyTag.class.php'); 
-
 include (MY_ROOT.'classes/MyList.class.php'); 
-
 include (MY_ROOT.'classes/MySelect.class.php'); 
-
 include (MY_ROOT.'classes/MyRadio.class.php'); 
-
 include (MY_ROOT.'classes/Hero.class.php'); 
-
-//include (MY_ROOT.'/Classes/Thing.class.php'); 
 
 
 //*********************  GET  POST STRINGS ******************//
@@ -114,7 +105,8 @@ if(isset($_POST['clientName'])) $clientName=convertToBase($_POST['clientName']);
 	if(isset($_GET['creaName'])) $creaName=$_GET['creaName']; else $creaName='';
 	if(isset($_GET['creaImg'])) $creaImg=$_GET['creaImg']; else $creaImg='';
 	
-		
+	//**************** GAME ******************************//
+	if(isset($_GET['curLife'])) $curLife=$_GET['curLife']; else $curLife=0;	
 	
 	//echo '*** '.$_POST['chp'].' .... ';
 //*************************  MODEL (DATA SOURCE )  ************************//
@@ -122,17 +114,17 @@ if(isset($_POST['clientName'])) $clientName=convertToBase($_POST['clientName']);
 //  DATA BASE PARAMETERS
 
 $dataSource='MYSQL';
-
+/*
 $dbHost='localhost';
 $dbUser='root';
 $dbPass='';
 $dbName='fanlab';
-/*
+*/
 $dbHost='ats.cs.ut.ee';
 $dbUser='kira77';
 $dbPass='f4nl4bKIRA351';
 $dbName='kira77_fanlab';
-*/
+
 
 switch($dataSource){
 // Data base object creation
