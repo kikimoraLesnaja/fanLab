@@ -18,7 +18,7 @@ if(isset($_GET['screenWidth'])){
 			$screenWidth=750;
 		}
 		////////////////////
-		$screenWidth=750;
+		//$screenWidth=750;
 		
 $_SESSION['saveWidth']=$screenWidth;
 
@@ -29,6 +29,10 @@ $_SESSION['saveWidth']=$screenWidth;
 define(DB_PREFIX, 'fan_');
 
 define(MY_ROOT,	'');
+
+define(DEBUG_MODE,	1);
+
+define(HEROES_MAX,	10);
 
 //define(MY_ROOT,	'/home/localhost/www/vr');
 //echo "db prefix=".DB_PREFIX;
@@ -47,6 +51,10 @@ include (MY_ROOT.'classes/MyTag.class.php');
 include (MY_ROOT.'classes/MyList.class.php'); 
 
 include (MY_ROOT.'classes/MySelect.class.php'); 
+
+include (MY_ROOT.'classes/MyRadio.class.php'); 
+
+include (MY_ROOT.'classes/Hero.class.php'); 
 
 //include (MY_ROOT.'/Classes/Thing.class.php'); 
 
@@ -74,11 +82,14 @@ if(isset($_GET['lang'])) $lang=$_GET['lang'];
 	 $page="about";*/
 	
 	  if(isset($_POST['nickname']))
-	$nickname=convertToBase(trim($_POST['nickname'])); else $nickname='';
+			$nickname=convertToBase(trim($_POST['nickname'])); else $nickname='';
+			
 if(isset($_POST['email']))
 	$e_mail=convertToBase(trim($_POST['email'])); else $e_mail='';
+	
 if(isset($_POST['pass1']))
 	$pass1=convertToBase(trim($_POST['pass1'])); else $pass1='';
+	
 if(isset($_POST['pass2']))
 	$pass2=convertToBase(trim($_POST['pass2']));  else $pass1='';
 	
@@ -92,26 +103,36 @@ if(isset($_POST['clientName'])) $clientName=convertToBase($_POST['clientName']);
 	if(isset($_POST['phone'])) $phone=convertToBase($_POST['phone']);  else $phone='';
 
 	if(isset($_POST['chp'])) $chp=$_POST['chp'];  else $chp=-1;
+	
+	
+	//**************** HERO CREATION ******************************//
+	if(isset($_GET['idh'])) $idh=$_GET['idh']; else $idh=0;
+	
+	if(isset($_GET['creaIdh'])) $creaIdh=(int)$_GET['creaIdh']; else $creaIdh=0;
+	if(isset($_GET['creaArm'])) $creaArm=(int)$_GET['creaArm']; else $creaArm=0;
+	if(isset($_GET['creaSex'])) $creaSex=(int)$_GET['creaSex']; else $creaSex=0;
+	if(isset($_GET['creaName'])) $creaName=$_GET['creaName']; else $creaName='';
+	if(isset($_GET['creaImg'])) $creaImg=$_GET['creaImg']; else $creaImg='';
+	
+		
+	
 	//echo '*** '.$_POST['chp'].' .... ';
 //*************************  MODEL (DATA SOURCE )  ************************//
 
 //  DATA BASE PARAMETERS
 
 $dataSource='MYSQL';
-/*
+
 $dbHost='localhost';
 $dbUser='root';
 $dbPass='';
 $dbName='fanlab';
-*/
+/*
 $dbHost='ats.cs.ut.ee';
-
 $dbUser='kira77';
-
 $dbPass='f4nl4bKIRA351';
-
 $dbName='kira77_fanlab';
-
+*/
 
 switch($dataSource){
 // Data base object creation
@@ -176,13 +197,13 @@ $kk=MY_ROOT.'controller/commonController.php';
 //  echo "k- $kk";
 
   include($kk);
-
+//echo ", 11. name $name";
   $kkk=MY_ROOT.'controller/'.$page.'Controller.php';
 
 //  echo "k- $kk";
 
   include($kkk);
-
+//echo ", 22. name $name";
   include (MY_ROOT.'controller/menuController.php'); 
 
 
